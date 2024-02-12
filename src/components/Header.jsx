@@ -167,31 +167,34 @@ const Header = () => {
             }`}
           >
             <ul>
-              {suggestions.map((elem) => {
-                return (
-                  <li
-                    className={`p-1 cursor-pointer ${
-                      isDarkMode ? "hover:bg-search-color" : "hover:bg-gray-100"
-                    } flex gap-2`}
-                    key={elem}
-                  >
-                    <Link
-                      to={"/search?q=" + elem}
-                      className="flex gap-2"
-                      onClick={() => setSearchQuery(elem)}
+              {suggestions &&
+                suggestions.map((elem) => {
+                  return (
+                    <li
+                      className={`p-1 cursor-pointer ${
+                        isDarkMode
+                          ? "hover:bg-search-color"
+                          : "hover:bg-gray-100"
+                      } flex gap-2`}
+                      key={elem}
                     >
-                      <GoSearch
-                        className={`text-2xl mx-1 max-sm:mt-1 p-0.5 ${
-                          isDarkMode
-                            ? "dark:text-gray-300"
-                            : "white:text-gray-300"
-                        } `}
-                      />
-                      {elem}
-                    </Link>
-                  </li>
-                );
-              })}
+                      <Link
+                        to={"/search?q=" + elem}
+                        className="flex gap-2"
+                        onClick={() => setSearchQuery(elem)}
+                      >
+                        <GoSearch
+                          className={`text-2xl mx-1 max-sm:mt-1 p-0.5 ${
+                            isDarkMode
+                              ? "dark:text-gray-300"
+                              : "white:text-gray-300"
+                          } `}
+                        />
+                        {elem}
+                      </Link>
+                    </li>
+                  );
+                })}
             </ul>
           </div>
         )}

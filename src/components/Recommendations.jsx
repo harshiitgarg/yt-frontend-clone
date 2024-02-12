@@ -21,7 +21,7 @@ const Recommendations = () => {
   if (recVideoList == null && window.innerWidth < 768) return <Loader />;
   return (
     <div className="">
-      {recVideoList.map((data, index) => (
+      {recVideoList && recVideoList.map((data, index) => (
         <Link
           to={"/watch?v=" + data?.contentDetails?.upload?.videoId}
           key={index}

@@ -8,6 +8,7 @@ const VideoCard = ({ info }) => {
   const { snippet, statistics, contentDetails } = info || {};
   const { title, channelTitle, thumbnails, publishedAt } = snippet || {};
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
+  const isDarkMode = useSelector((store) => store.theme.isDarkMode);
   return (
     <div>
       <div
@@ -26,8 +27,18 @@ const VideoCard = ({ info }) => {
           </div>
         </div>
         <h1 className="font-semi-bold text-md my-1">{title}</h1>
-        <h2 className="text-sm text-gray-400">{channelTitle}</h2>
-        <div className="flex gap-2 text-sm text-gray-400 ">
+        <h2
+          className={`text-sm ${
+            isDarkMode ? "text-gray-400" : "text-gray-800"
+          }`}
+        >
+          {channelTitle}
+        </h2>
+        <div
+          className={`flex gap-2 text-sm ${
+            isDarkMode ? "text-gray-400" : "text-gray-800"
+          } `}
+        >
           <h2>{abbreviateNumber(statistics?.viewCount)} views</h2>
           <PublishedTimeOfVideo publishedAt={publishedAt} />
         </div>

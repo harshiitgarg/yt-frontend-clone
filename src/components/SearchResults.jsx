@@ -37,7 +37,7 @@ const SearchResults = () => {
   }
   return (
     <div>
-      {Array.isArray(searchResults) &&
+      {searchResults && Array.isArray(searchResults) &&
         searchResults.map((result, i) => (
           <Link
             key={result?.id?.videoId}
