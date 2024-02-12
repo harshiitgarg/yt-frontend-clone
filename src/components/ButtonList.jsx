@@ -3,6 +3,7 @@ import Button from "./Button";
 import { tags } from "../constant";
 import { useSelector } from "react-redux";
 
+//Removed the button component as it is not functional
 const ButtonList = () => {
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
   return (

@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 
+//Removed the button component as it is not functional
 const Button = ({name}) => {
   const isDarkMode = useSelector((store) => store.theme.isDarkMode);
   return (
