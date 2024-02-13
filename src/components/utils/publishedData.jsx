@@ -1,8 +1,5 @@
 export const PublishedTimeOfVideo = ({ publishedAt }) => {
   const publishedDate = new Date(publishedAt);
-  // if (isNaN(Date.parse(publishedAt))) {
-  //   return publishedDate.getFullYear();
-  // }
   const currentDate = new Date();
   const yearsDifference =
     currentDate.getFullYear() - publishedDate.getFullYear();
