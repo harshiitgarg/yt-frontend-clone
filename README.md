@@ -1,7 +1,7 @@
 # YouTube-frontend-clone
 
 # Overview:
-### This application is powered by React + Vite and has a UI resembling that of YouTube. It uses Redux for its global state management and Tailwind CSS for styling.
+### React + Vite powers this application and has a UI resembling that of YouTube. It uses Redux for its global state management and Tailwind CSS for styling.
 
 Visit the deployed application on Vercel: <a href="https://yt-frontend-clone.vercel.app/">Click here</a>
 
@@ -34,4 +34,4 @@ npm run dev
 ```
 Visit <a href="http://localhost:3000">http://localhost:3000</a> in your browser.
 # Deployment
-The application is deployed on Vercel. For deployment instructions and additional details, refer to the official Vercel documentation.
+The application is deployed on Vercel. For deployment instructions and additional details, please review the official Vercel documentation.
